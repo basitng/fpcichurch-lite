@@ -14,8 +14,9 @@ SECRET_KEY = 'django-insecure-@ykf248&8re()lk2j$xhvsy%ty2g(zi&1az(pfssv)a3tayg_^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://fpcichurch.org", "https://web-production-cdb5.up.railway.app", "web-production-cdb5.up.railway.app", "127.0.0.1", "web-production-5569.up.railway.app","https://web-production-5569.up.railway.app"]
-CSRF_TRUSTED_ORIGINS=["https://web-production-5569.up.railway.app", "https://web-production-cdb5.up.railway.app"]
+
+ALLOWED_HOSTS = ["https://fpcichurch.org", "https://admin.fpcichurch.org", "127.0.0.1", "https://fpcichurch.up.railway.app", "fpcichurch.up.railway.app/" ]
+CSRF_TRUSTED_ORIGINS=["https://fpcichurch.up.railway.app","https://admin.fpcichurch.org",]
 
 # Application definition
 
@@ -27,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "rest_framework",
+    "corsheaders",
     'cloudinary_storage',
     'cloudinary',
     'blog',
@@ -41,6 +43,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -48,6 +51,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://fpcichurch.org",
+    "https://fpcichurch.up.railway.app",
+    "http://localhost:3000",
+    "https://admin.fpcichurch.org",
+]
 ROOT_URLCONF = 'coredev.urls'
 
 TEMPLATES = [
