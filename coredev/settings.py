@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-@ykf248&8re()lk2j$xhvsy%ty2g(zi&1az(pfssv)a3tayg_^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://fpcichurch.org", "fpcichurch.up.railway.app", "127.0.0.1", "https://admin.fpcichurch.org", "admin.fpcichurch.org", "https://fpcichurch.up.railway.app"]
+ALLOWED_HOSTS = ["https://fpcichurch.org","fpcichurch.up.railway.app", "127.0.0.1", "https://admin.fpcichurch.org", "admin.fpcichurch.org", "https://fpcichurch.up.railway.app"]
 CSRF_TRUSTED_ORIGINS=["https://fpcichurch.up.railway.app", "https://admin.fpcichurch.org"]
 
 # Application definition
@@ -55,6 +55,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://fpcichurch.up.railway.app",
     "http://localhost:3000",
     "https://admin.fpcichurch.org",
+    "fpcichurch.up.railway.app",
 ]
 ROOT_URLCONF = 'coredev.urls'
 
