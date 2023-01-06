@@ -74,8 +74,12 @@ WSGI_APPLICATION = 'coredev.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'ThpvGROao3cE0yjhYz7K',
+        'HOST': 'containers-us-west-166.railway.app',
+        'PORT': '7114',
     }
 }
 X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
