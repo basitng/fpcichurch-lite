@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from general.models import News
+from blog.models import ImageGallery
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,5 +9,5 @@ class PostSerializer(serializers.ModelSerializer):
 
 class GallerySerializer(serializers.ModelSerializer):
     class Meta:
-        model = News
+        model = ImageGallery
         fields = ('id','caption','restrict_from_view','image')

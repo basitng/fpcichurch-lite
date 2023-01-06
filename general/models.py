@@ -22,6 +22,7 @@ class News(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT, default=1)
     title = models.CharField(max_length=255)
     content = models.TextField()
+    excerpt = models.TextField()
     published = models.DateTimeField(default=timezone.now)
     status =models.CharField(max_length=20, choices=options, default="published")
     objects = models.Manager() #default manager
