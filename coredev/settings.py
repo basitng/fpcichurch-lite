@@ -55,7 +55,6 @@ CORS_ALLOWED_ORIGINS = [
     "https://fpcichurch.up.railway.app",
     "http://localhost:3000",
     "https://admin.fpcichurch.org",
-    "fpcichurch.up.railway.app",
 ]
 ROOT_URLCONF = 'coredev.urls'
 
