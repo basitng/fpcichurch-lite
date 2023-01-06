@@ -5,7 +5,7 @@ from blog.models import ImageGallery
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
-        fields = ('id','title','excerpt','content','status', 'caption', 'published', 'image')
+        fields = ('id','title','excerpt','content','status', 'category', 'published', 'image')
 
 class GallerySerializer(serializers.ModelSerializer):
     class Meta:
