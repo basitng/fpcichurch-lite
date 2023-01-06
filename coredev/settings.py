@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-@ykf248&8re()lk2j$xhvsy%ty2g(zi&1az(pfssv)a3tayg_^
 DEBUG = True
 
 ALLOWED_HOSTS = ["https://fpcichurch.org", "https://admin.fpcichurch.org", "http://localhost:3000", "localhost:3000","127.0.0.1", "fpcichurch.up.railway.app", "https://fpcichurch.up.railway.app"]
-CSRF_TRUSTED_ORIGINS=["https://fpcichurch.up.railway.app","https://admin.fpcichurch.org"]
+CSRF_TRUSTED_ORIGINS=["https://fpcichurch.up.railway.app","https://admin.fpcichurch.org", "http://localhost:3000", "localhost:3000",]
 
 # Application definition
 
