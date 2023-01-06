@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Contact,Testimony,About
+from .models import Contact,Testimony, About
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:

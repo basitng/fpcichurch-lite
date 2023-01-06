@@ -1,16 +1,17 @@
 from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView,RetrieveDestroyAPIView
 
-from blog.models import Post,ImageGallery
+from blog.models import ImageGallery
+from general.models import News as Post
 from blog_api.serializers import GallerySerializer, PostSerializer
 
 class PostList(ListCreateAPIView):
-    queryset = Post.postobjects.all()
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
     
 
 class PostDetail(RetrieveDestroyAPIView):
-    queryset = Post.objects.all()
+    queryset = Post.postobjects.all()
     serializer_class = PostSerializer   
 
 class GalleryList(ListCreateAPIView):

@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.generics import CreateAPIView, ListAPIView,ListCreateAPIView
 
-from .serializers import ContactSerializer,AboutSerializer,TestimonySerializer
-from .models import Contact,About,Testimony
+from .serializers import ContactSerializer,TestimonySerializer, AboutSerializer
+from .models import Contact,Testimony, About
 
 class ContactFCPI(CreateAPIView):
     queryset = Contact.objects.all()

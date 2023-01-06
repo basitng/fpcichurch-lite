@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import AboutFCPI,Testimonies,ContactFCPI
+from .views import Testimonies,ContactFCPI,AboutFCPI
 
 
 app_name = "general_api"

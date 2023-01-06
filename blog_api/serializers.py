@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from blog.models import Post
+from general.models import News
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
-        fields = ('id','title','author','excerpt','content','status','published', 'image')
+        model = News
+        fields = ('id','title','excerpt','content','status','published', 'image')
 
 class GallerySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
+        model = News
         fields = ('id','caption','restrict_from_view','image')
