@@ -4,7 +4,7 @@ from .models import News, Testimony,Contact, About
 
 @admin.register(Testimony)
 class TestimonyAdmin(admin.ModelAdmin):
-    list_display = ('story','id', 'title')
+    list_display = ('story','id', 'title','testifier')
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):

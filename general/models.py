@@ -40,6 +40,7 @@ class News(models.Model):
 
 class Testimony(models.Model):
     title = models.CharField(max_length=200)
+    testifier = models.CharField(max_length=200)
     story = models.TextField()
     picture = models.ImageField(null=True, blank=True, upload_to="testimonies/images/")
     published_date = models.DateField(default=timezone.now)
