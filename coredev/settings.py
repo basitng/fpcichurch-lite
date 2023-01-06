@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-@ykf248&8re()lk2j$xhvsy%ty2g(zi&1az(pfssv)a3tayg_^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://fpcichurch.org","fpcichurch.up.railway.app", "127.0.0.1", "http://localhost:3000", "https://admin.fpcichurch.org", "admin.fpcichurch.org", "https://fpcichurch.up.railway.app"]
+ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS=["https://fpcichurch.up.railway.app", "https://admin.fpcichurch.org"]
 
 # Application definition
@@ -50,12 +50,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
-    "https://fpcichurch.org",
-    "https://fpcichurch.up.railway.app",
-    "https://admin.fpcichurch.org",
-]
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ORIGIN = [
+#     "http://localhost:3000",
+#     "https://fpcichurch.org",
+#     "https://fpcichurch.up.railway.app",
+#     "https://admin.fpcichurch.org",
+# ]
 
 
 ROOT_URLCONF = 'coredev.urls'
