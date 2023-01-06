@@ -56,6 +56,8 @@ CORS_ORIGIN_WHITELIST = [
     "https://fpcichurch.up.railway.app",
     "https://admin.fpcichurch.org",
 ]
+
+
 ROOT_URLCONF = 'coredev.urls'
 
 TEMPLATES = [
