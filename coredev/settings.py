@@ -145,10 +145,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSIONS_CLASSES':[
         # allow anyone to access this endpoint
         'rest_framework.permissions.AllowAny',
-        # Rest framework default permission
-        # 'rest_framework.permissions.AnonymousUser',
-        # allow only authenticated user to access endpoint
-        # 'rest_framework.permissions.isAuthenticated',
     ]
 }
 
