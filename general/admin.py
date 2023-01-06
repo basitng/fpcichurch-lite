@@ -16,5 +16,5 @@ class AboutAdmin(admin.ModelAdmin):
 
 @admin.register(News)
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('title','id', 'status', 'slug', 'author')
+    list_display = ('title','id', 'status', 'slug', 'author', 'category')
     prepopulated_fields = { 'slug':('title',), }
